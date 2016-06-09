@@ -246,8 +246,8 @@ class BaseCursor(object):
             exc, value = sys.exc_info()[:2]
             self.errorhandler(self, exc, value)
         self._executed = query
-        if not self._defer_warnings:
-            self._warning_check()
+        # if not self._defer_warnings:
+        #     self._warning_check()
         return res
 
     def executemany(self, query, args):
